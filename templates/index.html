@@ -26,8 +26,11 @@
             {%  for event in events %}
             <div>
                 <p>
-                    <b>Date: {{event.date}} Event:{{event.name}} Capacity:{{event.number_of_guests}} Venue:{{event.location}}, Description:{{event.description}} </b>
-
+                    <b>Date:</b> {{event.date}} <b>Event:</b>{{event.name}} <b>Capacity:</b>:{{event.number_of_guests}} <b>Venue:</b>{{event.location}}, <b>Description</b>:{{event.description}} 
+                
+                    {% if event.recurring%}
+                    <span> &#9989; </span>
+                    {% endif %}
                 </p>
             </div>
             {% endfor %}
