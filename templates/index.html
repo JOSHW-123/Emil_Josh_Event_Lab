@@ -28,7 +28,7 @@
                 <p>
                     <b>Date:</b> {{event.date}} <b>Event:</b>{{event.name}} <b>Capacity:</b>:{{event.number_of_guests}} <b>Venue:</b>{{event.location}}, <b>Description</b>:{{event.description}} 
                 
-                    {% if event.recurring%}
+                    {% if event.description == "Movie" %}
                     <span> &#9989; </span>
                     {% endif %}
                 </p>
